@@ -35,7 +35,7 @@ canvas {
   z-index: 1;
 }
 
-#startBtn, #pauseBtn, #restartBtn {
+#startBtn, #pauseBtn, #retryBtn {
   position: absolute;
   z-index: 1;
   padding: 12px 25px;
@@ -52,31 +52,22 @@ canvas {
 
 #startBtn { top: 180px; }
 #pauseBtn { top: 220px; display:none; }
-#restartBtn { top: 260px; display:none; }
+#retryBtn { top: 260px; display:none; }
 
 #leftPanel {
   position: absolute;
   left: 0;
   top: 0;
-  width: 200px;
+  width: 220px;
   height: 100%;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.95);
   padding: 10px;
-  border-radius: 12px 0 0 12px;
   overflow-y: auto;
   z-index: 10;
 }
 
-#rightPanel {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 200px;
-  height: 100%;
-  background: rgba(255,255,255,0.9);
-  padding: 10px;
-  border-radius: 0 12px 12px 0;
-  z-index: 10;
+#usernameBlock {
+  margin-bottom: 20px;
 }
 
 #usernameInput {
@@ -84,7 +75,7 @@ canvas {
   font-family: 'Schoolbell', cursive;
   font-size: 16px;
   padding: 5px;
-  margin-top: 10px;
+  margin-top: 5px;
   box-sizing: border-box;
 }
 
@@ -96,6 +87,6 @@ canvas {
 }
 
 #bestScoreDisplay {
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 16px;
 }
