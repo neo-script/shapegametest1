@@ -35,7 +35,7 @@ canvas {
   z-index: 1;
 }
 
-#startBtn, #restartBtn {
+#startBtn, #pauseBtn, #restartBtn {
   position: absolute;
   z-index: 1;
   padding: 12px 25px;
@@ -48,39 +48,35 @@ canvas {
   cursor: pointer;
   left: 50%;
   transform: translateX(-50%);
-  top: 180px;
 }
 
-#restartBtn {
-  display: none;
-}
+#startBtn { top: 180px; }
+#pauseBtn { top: 220px; display:none; }
+#restartBtn { top: 260px; display:none; }
 
 #leftPanel {
-  left: 10px;
-  top: 120px;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 200px;
-  height: 400px;
-  overflow-y: auto;
+  height: 100%;
   background: rgba(255,255,255,0.9);
   padding: 10px;
-  border-radius: 12px;
-  font-size: 16px;
+  border-radius: 12px 0 0 12px;
+  overflow-y: auto;
   z-index: 10;
-  pointer-events: auto;
 }
 
 #rightPanel {
-  right: 10px;
-  top: 300px; /* lower than leaderboard */
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 200px;
-  height: 150px;
-  overflow: hidden;
+  height: 100%;
   background: rgba(255,255,255,0.9);
   padding: 10px;
-  border-radius: 12px;
-  font-size: 16px;
+  border-radius: 0 12px 12px 0;
   z-index: 10;
-  pointer-events: auto;
 }
 
 #usernameInput {
@@ -88,10 +84,8 @@ canvas {
   font-family: 'Schoolbell', cursive;
   font-size: 16px;
   padding: 5px;
+  margin-top: 10px;
   box-sizing: border-box;
-  z-index: 11;
-  position: relative;
-  pointer-events: auto;
 }
 
 #usernameError {
@@ -99,4 +93,9 @@ canvas {
   font-size: 14px;
   display: none;
   margin-top: 5px;
+}
+
+#bestScoreDisplay {
+  margin-top: 15px;
+  font-size: 16px;
 }
