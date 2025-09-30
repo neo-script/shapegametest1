@@ -55,12 +55,8 @@ canvas {
   display: none;
 }
 
-#leftPanel {
-  left: 10px;
-  top: 120px;
-  width: 200px;
-  height: 400px;
-  overflow-y: auto;
+#leftPanel, #rightPanel {
+  position: absolute;           /* BUGFIX: make offsets work */
   background: rgba(255,255,255,0.9);
   padding: 10px;
   border-radius: 12px;
@@ -69,18 +65,20 @@ canvas {
   pointer-events: auto;
 }
 
+#leftPanel {
+  left: 10px;
+  top: 120px;
+  width: 200px;
+  height: 400px;
+  overflow-y: auto;
+}
+
 #rightPanel {
   right: 10px;
   top: 300px; /* lowered so it doesn’t touch leaderboard */
   width: 200px;
   height: 150px;
   overflow: hidden;
-  background: rgba(255,255,255,0.9);
-  padding: 10px;
-  border-radius: 12px;
-  font-size: 16px;
-  z-index: 10;
-  pointer-events: auto;
 }
 
 #usernameInput {
@@ -100,3 +98,4 @@ canvas {
   display: none;
   margin-top: 5px;
 }
+
